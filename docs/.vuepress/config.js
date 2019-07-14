@@ -1,12 +1,32 @@
 module.exports = {
     title: '土豆丸子',
-    description: '你好我的文档',
-
+    description: '爱吃丸子的土豆',
+    locales: {
+        '/': {
+          lang: 'zh-CN'
+        }
+      },
+    head: [
+        ['link', { rel: 'icon', href: '/logo.ico'}]
+    ],
+    base: '/documents/',
     themeConfig: {
         lastUpdated: '上次更新',
+        repo: 'leisureg/documents',
+        editLinks: true,
+        editLinkText: '编辑此页面',
+        docsDir: 'docs',
+        serviceWorker: {
+            updatePopup: true // Boolean | Object, 默认值是 undefined.
+            // 如果设置为 true, 默认的文本配置将是: 
+            // updatePopup: { 
+            //    message: "New content is available.", 
+            //    buttonText: "Refresh" 
+            // }
+          },
         nav: [
           { text: 'Home', link: '/' },
-          { text: 'Guide', link: '/guide/' },
+          { text: 'Guide', link: '/css/' },
           {
             text: 'Languages',
             items: [
